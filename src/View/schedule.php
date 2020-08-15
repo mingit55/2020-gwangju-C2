@@ -50,7 +50,6 @@
                     if($prev_events)                                
                         foreach($prev_events as $idx => $item){     // 이전 날의 포함되었던 축제가 있다면, 동일한 인덱스에 다시 저장함
                             if($item && $item->start_date <= $day && $day <= $item->end_date) $events[$idx] = $item;
-                            else $events[$idx] = null;              // 이전 날에 포함된 축제가 종료되면 그 자리는 비게 만듦
                         }
                         
                     foreach($started as $item){                     // 축제 공간 3개 중 빈자리(NULL)이 있다면 오늘 시작한 축제를 3개까지 넣는다.
